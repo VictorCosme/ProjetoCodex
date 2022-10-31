@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const Profile = require('./models/Profile')
+require('dotenv').config()
 
 
 app.use(
@@ -19,8 +19,8 @@ app.use('/profile', profileRoutes)
 
 
 
-const USER_BD = 'leonardocavalcanti'
-const BD_PASSWORD = encodeURIComponent('kleverson20')
+const USER_BD = process.env.USER_BD
+const BD_PASSWORD = encodeURIComponent(process.env.BD_PASSWORD)
 
 
 mongoose.connect(`mongodb+srv://${USER_BD}:${BD_PASSWORD}@apicluster.1icwsn2.mongodb.net/?retryWrites=true&w=majority`)
