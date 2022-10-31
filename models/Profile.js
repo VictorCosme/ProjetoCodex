@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Person = mongoose.model('Profile', {
+const Profile = mongoose.model('Profile', {
 
     name: String,
     genre: String,
@@ -11,4 +11,4 @@ const Person = mongoose.model('Profile', {
 
 })
 
-module.exports = Person
+module.exports = Profile

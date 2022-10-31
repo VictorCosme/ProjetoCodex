@@ -13,35 +13,10 @@ app.use(
 
 app.use(express.json())
 
-app.post('/profile', async (req, res) => {
+const profileRoutes = require('./routes/profileRoutes')
 
-    const { name, genre, age, email, password, approved } = req.body
-    
-    
-    if(!name){
-        res.status(422).json({error: 'campo obrgatório'})
-    }
-    
-    
-    const  profile = {
-        name,
-        genre,
-        age,
-        email,
-        password,
-        approved
-    }
+app.use('/profile', profileRoutes)
 
-    try {
-        
-    await Profile.create(profile)
-
-    res.status(201).json('Perfil cadastro com sucesso!')
-    
-    } catch (error) {
-        res.status(500).json({error})
-    }
-})
 
 
 const USER_BD = 'leonardocavalcanti'
