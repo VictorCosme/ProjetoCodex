@@ -8,26 +8,21 @@ router.post('/', async (req, res) => {
     const { name, genre, age, email, password, approved } = req.body
     
     
-    if(!name){
+    if(name === undefined){
         res.status(422).json({error: 'campo obrgatório'})
     }
 
-     if(!genre){
-        res.status(422).json({error: 'campo obrgatório'})
-
-    }
-
-     if(!age){
+     if(genre === undefined){
         res.status(422).json({error: 'campo obrgatório'})
 
     }
 
-     if(!email){
+    if(email === undefined){
         res.status(422).json({error: 'campo obrgatório'})
 
     }
     
-     if(!password){
+     if(password === undefined){
         res.status(422).json({error: 'campo obrgatório'})
 
     }
