@@ -5,33 +5,13 @@ const Profile = require('../models/Profile')
 
 router.post('/', async (req, res) => {
 
-    const { name, genre, age, email, password, approved } = req.body
     
-    
-    if(name === undefined){
-        res.status(422).json({error: 'campo obrgatório'})
-    }
-
-     if(genre === undefined){
-        res.status(422).json({error: 'campo obrgatório'})
-
-    }
-
-    if(email === undefined){
-        res.status(422).json({error: 'campo obrgatório'})
-
-    }
-    
-     if(password === undefined){
-        res.status(422).json({error: 'campo obrgatório'})
-
-    }
-    
+    const { name, genre, yearsOld, email, password, approved } = req.body
     
     const  profile = {
         name,
         genre,
-        age,
+        yearsOld:new Date(yearsOld),
         email,
         password,
         approved
@@ -43,9 +23,16 @@ router.post('/', async (req, res) => {
 
     res.status(201).json('Perfil cadastro com sucesso!')
     
-    } catch (error) {
-        res.status(500).json({error})
-    }
+    } catch (error) {   
+       
+        if (error.kind = 'required'){
+              res.status(402).json({erro:'campo inválido'});
+            
+            }
+        
+        }
+
 })
+
 
 module.exports = router
