@@ -1,4 +1,5 @@
 
+const routes = require('./routes/routes')
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -12,6 +13,7 @@ app.use(
 )
 
 app.use(express.json())
+app.use(routes)
 
 const profileRoutes = require('./routes/profileRoutes')
 
