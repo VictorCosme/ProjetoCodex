@@ -1,0 +1,64 @@
+#cadastro-login {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    font: "Open sans Extra bold";
+
+} 
+
+#cadastro-login h1 {
+    text-align: center;
+    color: #006dff;
+    font-size: 3em;
+}
+
+#cadastro-login img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+#cadastro-login a{
+    display: block;
+    text-decoration: none;
+    color: #292929;
+    font-weight: 600;
+    margin: 35px;
+}
+
+#cadastro-login body {
+    background-color: #d8d8d8;
+}
+
+#cadastro-login h3 {
+    margin: 0;
+}
+
+.primeira-informacao {
+    padding-top: 35px;
+}
+
+.input {
+    width: 277px;
+    height: 1.8em;
+    margin-top: 5px;
+}
+
+.informacao {
+    margin: 0px;
+}
+
+.final-login-cadastro {
+    display: block;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    color: #006dff;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+/*
+*** Inicio das listas em si ***/
